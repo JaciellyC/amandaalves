@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Paleta nude / creme / marsala */
+  --background: #faf6f1;          /* creme suave */
+  --foreground: #2a1a14;          /* marrom muito escuro */
+  --cream: #f5ede3;               /* nude claro */
+  --rose: #ecdcd0;                /* rosé delicado */
+  --rose-soft: #f3e3d6;
+  --marsala: #5a2e25;             /* marsala principal */
+  --marsala-dark: #3d1f18;        /* marrom escuro CTA */
+  --marsala-soft: #6b3a30;
+  --muted-text: #7a5a4d;
+  --border-soft: #e3d4c4;
+
+  --card: #ffffff;
+  --card-foreground: var(--foreground);
+  --popover: #ffffff;
+  --popover-foreground: var(--foreground);
+  --primary: var(--marsala);
+  --primary-foreground: #ffffff;
+  --secondary: var(--cream);
+  --secondary-foreground: var(--marsala);
+  --muted: var(--cream);
+  --muted-foreground: var(--muted-text);
+  --accent: var(--rose);
+  --accent-foreground: var(--marsala);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: var(--border-soft);
+  --input: var(--border-soft);
+  --ring: var(--marsala);
+  --radius: 0.25rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans-inter), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-serif-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'Geist Mono', monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-cream: var(--cream);
+  --color-rose: var(--rose);
+  --color-rose-soft: var(--rose-soft);
+  --color-marsala: var(--marsala);
+  --color-marsala-dark: var(--marsala-dark);
+  --color-marsala-soft: var(--marsala-soft);
+  --color-muted-text: var(--muted-text);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02";
+  }
+}
+
+.logo-navbar {
+  height: 70px;
+  margin: 1%;
+}
+
+.logo-hero{
+  height: 100px;
+}
+
+.logo-footer {
+  height: 90px;
+}
