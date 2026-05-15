@@ -46,7 +46,7 @@ export function Hero() {
         </div>
 
         <a
-          href="https://wa.me/5583900000000?text=Ol%C3%A1%20Amanda%2C%20gostaria%20de%20agendar%20uma%20produ%C3%A7%C3%A3o."
+          href="https://wa.me/558393742096"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-12 inline-flex items-center justify-center bg-marsala px-9 py-4 text-[11px] tracking-[0.28em] uppercase font-light text-white shadow-lg hover:bg-marsala-dark transition-colors"
